@@ -1,0 +1,40 @@
+---
+layout: default
+title: Interne Nachrichten des Erler Motor Clubs
+description: Bitte geben Sie das Passwort ein.
+---
+<!--             Login-Bereich für interne Vereinsnachrichten                -->
+<!----------------------------------------------------------------------------->
+
+<!-- Eigabebox für das Passwort -->
+<form name="passwort" class="password-box">
+  <input type="password" name="pswd" id="login-password">
+  <label class="show-password-label" for="show-password">
+    <input type="checkbox" onclick="myFunction()" id="show-password">
+    Passwort anzeigen
+  </label>
+  <button type=button onClick="passw()">Anmelden
+</form>
+
+<script type="text/javascript">
+
+/* Funktion zur Abfrage des Passwortes */
+  function passw() {
+    if (document.passwort.pswd.value == "goggokart") {
+      document.location.href = "intern.html";
+    } else {
+            document.location.href = "login.html";
+    }
+  }
+
+/* Funktion zur Anzeige des Passwortes */
+  function myFunction() {
+    var x = document.getElementById("login-password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
+</script>
